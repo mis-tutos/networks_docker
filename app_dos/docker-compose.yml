@@ -1,0 +1,15 @@
+version: "3.9"
+services: 
+    web: 
+        build: .
+        ports: 
+            - 5000
+        networks:
+            tuto-network:
+                aliases: 
+                    - dos
+
+networks:
+    tuto-network: 
+        name: tuto-network
+        driver: bridge
